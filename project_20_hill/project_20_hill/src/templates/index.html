@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- property 아직 적용 안되는 듯함. 조사 필요-->
+    <meta property="og:title" content="콘텐츠 제목" />
+    <!-- 스프링 부트 주소-->
+    <meta property="og:url" content="웹페이지 URL" />
+    <meta property="og:type" content="website" />
+    <!-- 스무고개 icon (스프링부트에 탑재) /assets/00_image.png -->
+    <meta property="og:image" content="표시되는 이미지" />
+    <meta property="og:title" content="20_hill - 연예인 스무고개 게임" />
+    <meta property="og:description" content="" />
+
+
+    <title>20_hill - 유명인 스무고개 게임</title>
+
+    <link rel="stylesheet" href="CSS_Main.css">
+</head>
+
+<body>
+    <div class="container">
+        <h6>
+            <div style="font-size: 40px;">
+                <span class="Pixel">
+                    20_hill -
+                </span>
+                <span class="sunflower">
+                    유명인 스무고개 게임
+                </span>
+            </div>
+        </h6>
+        <div>
+            <p class="description" style="font-size: 30px;padding-top :20px;padding-bottom: 20px;">
+                유명인(연예인, 스트리머, 유튜버등)을 맞추어 보세요.
+            </p>
+        </div>
+        <hr>
+        <div>
+            <p class="yesterday" style="font-size: 30px;padding-top: 50px;">
+                어제의 유명인 :
+                <script>
+                    <!-- DB연동 필요, 임시(유재석)-->
+                    var name = "유재석"
+                    document.write(name)
+                </script>
+            </p>
+        </div>
+
+        <!-- 보안 필요시 POST방식 사용-->
+        <form id="form" autocomplete="off">
+            <div id="name-wrapper" style="padding-top: 20px; ">
+                <input type="text" name="dummy" style="position: absolute; width: 0;height: 0;opacity: 0;">
+                <input placeholder="이름을 입력하세요" type="text" id="name"
+                    style="width: 500px;height: 50px;text-align: center;">
+                <input type="submit" value="시작하기" id="name_button" style="cursor: pointer;padding: 17px 40px;">
+            </div>
+        </form>
+        <hr style="margin-top: 100px;">
+
+
+        <footer>
+            <h1>
+                QnA
+            </h1>
+            <p style="margin-top: 20px;">
+                <b>Q. 20_hill은 어떤 프로젝트인가요?</b>
+            </p>
+            <p>
+                A.
+            </p>
+            <ul>
+                <li>
+                    20_hill은 어쩌구 저쩌구
+                    네모네모하는 네모네모하는 네모네모하는 네모네모하는
+                    네모네모하는 네모네모하는 네모네모하는 네모네모하는
+                    네모네모하는 네모네모하는 프로젝트입니다.
+                </li>
+            </ul>
+
+            <p style="margin-top: 25px;">
+                <b>Q. 유명인에는 어떤 사람들이 포함되어 있나요?</b>
+            </p>
+            <p>
+                A.
+            </p>
+            <ul>
+                <li>
+                    유명인들은 연예인, 스트리머, 유튜버, bj등이 포함되어 있습니다
+                </li>
+            </ul>
+
+            <p style="margin-top: 25px;">
+                <b>Q. 하루에 여러번 플레이할 수 있나요?</b>
+            </p>
+            <p>
+                A. 
+            </p>
+            <ul>
+                <li>
+                    유명인 스무고개는 하루에 한 번만 플레이하실 수 있습니다. 모두가 동일한 정답을 가지기 때문입니다
+                </li>
+            </ul>
+
+            <p style="margin-top: 25px;">
+                <b>Q. 소스코드를 볼 수 있을까요?</b>
+            </p>
+            <p>
+                A. 
+            </p>
+            <ul>
+                <li>
+                    물론이죠!
+                    <a href="https://github.com/qlfeld1230/project-20_hill" target="_blank">소스코드</a>
+                </li>
+            </ul>
+        </footer>
+
+
+    </div>
+
+
+</body>
+
+</html>
