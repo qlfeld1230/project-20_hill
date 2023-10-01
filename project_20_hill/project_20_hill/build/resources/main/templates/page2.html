@@ -10,6 +10,7 @@
     <link rel="stylesheet" th:href="@{/CSS/page2.css}"/>
 </head>
 <body>
+    <div class="container">
     <div class="previous_question">
         이전 질문
         <br>
@@ -22,28 +23,33 @@
         </br>
     </div>
 
-    <div class="answer">
+    <div class="answer" >
         <!--해당 질문 정답(y/n) db 연동-->
         응답
+        <div class="yesno">
         <br>
-        <div class="yes">
-            네
-        </div>
-        <div class="no">
-            아니오
-        </div>
+            <div class="yes">
+                네
+            </div>
+            <div class="no">
+                아니오
+            </div>
         </br>
+        </div>
     </div>
 
-    <div class="hearts" style="text-align:right;">
-        <img src="https://static.vecteezy.com/system/resources/previews/000/547/596/non_2x/hearts-icons-vectors-illustrations.jpg" alt="heart1">
-
-
+    <!--
+    <div class="hearts" style="text-align:right; width: 50px; height: 50px;">
+        <img src="https://w7.pngwing.com/pngs/820/953/png-transparent-love-hearts-love-hearts-red-heart-love-heart-computer-icons-thumbnail.png" alt="heart1">
     </div>
+    -->
+
+    
 
     <div style="text-align:center;" >
         <!--최종정답 db 연동-->
-        <input placeholder="정답을 입력하세요." type="text" id="answer_input">
+        <input placeholder="정답을 입력하세요." type="text" id="answer_input" 
+        style="width: 600px; height: 50px; text-align: center; margin-top: 25px; margin-bottom: 15px;">
     </div>
 
     <div class="question">
@@ -59,13 +65,12 @@
     <div class="question">
         <!--질문db 연동(how?)-->
         <div class="circle">   
-            질문3
+            뉴스에 보도된 적이 있나요? 아니면 그런 ~~
         </div>
         <div class="circle">   
-            질문4
+            000과 합방을 한 적이 있나요?
         </div>
     </div>
-
-
+</div>
 </body>
 </html>
