@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&family=Orbit&display=swap');
+
+b {
+    padding-top: 5px;
+    font-weight: 600;
+}
+
+
+.Pixel {
+    font-family: 'Pixelify Sans', cursive;
+    font-family: 'Young Serif', serif;
+    font-weight: 700;
+}
+
+.sunflower {
+    font-family: 'Sunflower', sans-serif;
+}
+
+
+.description {
+    font-family: 'Hi Melody', cursive;
+}
+
+.yesterday {
+    font-family: 'Hi Melody', cursive;
+    font-family: 'Orbit', sans-serif;
+}
+
+#name-wrapper {
+    display: flex;
+    margin: 20px 0;
+    align-items: center;
+
+}
+button btn{
+
+}
+body .container {
+    margin: 0 auto;
+    max-width: 640px;
+    padding: 0 1em 1em;
+}
+
+footer {
+    margin-top: 1em;
+}
+
+input[type="button"] {
+    color: black;
+    padding: .5em;
+    border: 1px solid #666666;
+    border-radius: 0.2em;
+}
+
+.overlay-button {
+    position: relative;
+    color: black;
+    background: none;
+    border: none;
+    height: 2em;
+    font-weight: bold;
+    width: 2em;
+}
+
+body.dark input[type="button"] {
+    color: #fafafa;
+    border: 1px solid #333;
+}
+
+body.dark .overlay-button {
+    color: #fafafa;
+    height: 2em;
+    font-weight: bold;
+    width: 2em;
+}
+
+ul {
+    margin-top: -2.59em;
+    padding-inline-start: 3em;
+}
+li {
+    padding-top: 5px;
+}

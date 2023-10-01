@@ -10,10 +10,5 @@
         <module name="project_20_hill.main" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="project_20_hill" target="11" />
-      <module name="project_20_hill.main" target="11" />
-      <module name="project_20_hill.test" target="11" />
-    </bytecodeTargetLevel>
   </component>
 </project>

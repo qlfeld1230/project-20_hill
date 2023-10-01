@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Over</title>
+
+    <link rel="stylesheet" href="page3.css">
+</head>
+<body>
+    <div style="font-size:70px; text-align: center;">
+        <!-- 시작 버튼 clcik > 서버에 저장된 이름DB 연동 > js로-->
+        <p id="displayArea"></p>
+
+        <br>
+        <!-- 서버에 저장된 정답DB 연동 -->
+        오늘의 정답은 000이었습니다.
+        </br>
+
+        내일 다시 도전해 주세요!
+
+        <br>
+            <!-- page4 링크 연동 -->
+            <button href="" style="font-size:70px; margin:100px;">
+                명예의전당
+            </button>
+        </br>
+
+    </div>
+
+    <!-- 정답 맞출때랑 틀릴때 다른 text 출력 .. 어케하노.. -->
+    <script>
+      //이름 출력 함수
+      function displayName() {
+        const name = document.getElementById("name").value;
+        const displayArea = document.getElementById("displayArea");
+        displayArea.textContent = name + "님은 정답을 맞추지 못하였습니다!";
+      }
+    </script>
+
+</body>
+</html>
