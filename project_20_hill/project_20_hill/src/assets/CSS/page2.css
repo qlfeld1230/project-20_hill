@@ -39,7 +39,7 @@ body .container {
   display:flex;
   margin-top:15px;
 }
-
+/*4가지 질문중 1개 클릭했을때 yes/no 나타나기 적용..*/
 .yes{
     width: 100px;
     height: 100px;
