@@ -18,7 +18,9 @@
 
     <title>20_hill - 유명인 스무고개 게임</title>
 
-    <link rel="stylesheet" th:href="@{/CSS/CSS_Main.css}"/>
+    <!-- <link rel="stylesheet" th:href="@{/CSS/CSS_Main.css}"/> -->
+    <link rel="stylesheet" href="../static/CSS/CSS_Main.css"/>
+    
 </head>
 
 <body>
@@ -51,16 +53,12 @@
         </div>
 
         <!-- 보안 필요시 POST방식 사용-->
-        <form id="form" autocomplete="off">
+        <form id="form" autocomplete="off" method="get" th:action="@{/process}">
             <div id="name-wrapper" style="padding-top: 20px; ">
                 <input type="text" name="dummy" style="position: absolute; width: 0;height: 0;opacity: 0;">
-                <input placeholder="이름을 입력하세요" type="text" id="name"
+                <input oninvalid="this.setCustomValidity('이름은 반드시 입력해야 합니다.')" required oninput="this.setCustomValidity('')" placeholder="이름을 입력하세요" type="text" id="name"
                     style="width: 500px;height: 50px;text-align: center;">
                 <input type="submit" value="시작하기" id="name_button" style="cursor: pointer;padding: 17px 40px;">
-
-                <button onclick="window.location.href='/process'">
-                    시작하기
-                </button>
             </div>
         </form>
         <hr style="margin-top: 100px;">

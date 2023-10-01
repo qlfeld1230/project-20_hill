@@ -1,4 +1,4 @@
-body.container {
+body .container {
     margin: 0 auto;
     max-width: 640px;
     padding: 0 1em 1em;
@@ -6,7 +6,7 @@ body.container {
     text-align: center;
     
   }
-body.list_button{
+body .list_button{
     font-size:70px; 
     margin:100px;
 }
