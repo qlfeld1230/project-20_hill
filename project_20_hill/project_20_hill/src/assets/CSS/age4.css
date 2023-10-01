@@ -6,6 +6,7 @@ body{
     margin: 50px;
     padding-top: 150px;
     font-family: 'Gamja Flower', cursive;
+    max-width: 640px;
 }
 
 
