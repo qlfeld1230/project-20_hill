@@ -5,15 +5,15 @@ body .container {
 }
 
 .previous_question{
-  margin-top: 100px;
-  margin-right: 100px;
+  margin-top: 20px;
+  margin-right: 134px;
   font-size: 15px;
 }
 
 .box {
     width: 250px;
     height: 50px;
-    border: 2px solid silver; 
+    border: 3px solid rgb(213, 235, 233); 
     padding: 15px;
     margin-top: 15px;
   }
@@ -26,13 +26,13 @@ body .container {
     align-items: center;
   }
 
-  .previous_question{
+.previous_question{
     display: inline-block;
-    }
+  }
 
 .answer{
   display: inline-block;
-  width:250px;
+  width:210px;
 }
 
 .yesno{
@@ -41,8 +41,8 @@ body .container {
 }
 /*4가지 질문중 1개 클릭했을때 yes/no 나타나기 적용..*/
 .yes{
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%; /* 동그라미 */
     border: 2px solid silver;
     display: flex;
@@ -54,8 +54,8 @@ body .container {
 }
 
 .no{
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     border-radius: 30%;
     border: 2px solid silver;
     font-size: 15px;
@@ -78,7 +78,7 @@ body .container {
     width: 100%; 
     border-radius: 10%; /* 둥근 모양 */
     margin: 15px;
-    background: silver;
+    background: rgb(213, 235, 233);
     display: flex;
     justify-content: center;
     align-items: center;
