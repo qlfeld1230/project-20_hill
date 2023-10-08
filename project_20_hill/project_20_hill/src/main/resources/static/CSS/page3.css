@@ -1,12 +1,8 @@
 body .container {
     margin: 0 auto;
-    max-width: 640px;
-    padding: 0 1em 1em;
+    max-width: 680px;
+    padding: 1em 1em 1em;
     font-size:50px; 
     text-align: center;
-    
+
   }
-body .list_button{
-    font-size:70px; 
-    margin:100px;
-}
