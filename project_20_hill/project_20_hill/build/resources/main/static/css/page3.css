@@ -1,0 +1,8 @@
+body .container {
+    margin: 0 auto;
+    max-width: 680px;
+    padding: 1em 1em 1em;
+    font-size:50px; 
+    text-align: center;
+
+  }
