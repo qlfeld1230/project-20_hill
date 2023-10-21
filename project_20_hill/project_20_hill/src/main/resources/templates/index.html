@@ -19,11 +19,11 @@
     <title>20_hill - 유명인 스무고개 게임</title>
 
      <link rel="stylesheet" th:href="@{/css/CSS_Main.css}"/>
-<!--    <link rel="stylesheet" href="../static/CSS/CSS_Main.css"/>-->
     
 </head>
 
 <body>
+
     <div class="container">
         <h6>
             <div style="font-size: 40px;">
@@ -46,14 +46,15 @@
                 어제의 유명인 :
                 <script>
                     <!-- DB연동 필요, 임시(유재석)-->
-                    var name = "유재석"
-                    document.write(name)
+                    var name_yesterday = "유재석"
+                    
+                    document.write(name_yesterday)
                 </script>
             </p>
         </div>
 
         <!-- 보안 필요시 POST방식 사용-->
-        <form id="form" autocomplete="off" method="get" th:action="@{/process}">
+        <form id="form" autocomplete="off" method="post" th:action="@{/process}">
             <div id="name-wrapper" style="padding-top: 20px; ">
                 <input type="text" name="dummy" style="position: absolute; width: 0;height: 0;opacity: 0;">
                 <input oninvalid="this.setCustomValidity('이름은 반드시 입력해야 합니다.')" required oninput="this.setCustomValidity('')" placeholder="이름을 입력하세요" type="text" id="name"
@@ -76,10 +77,8 @@
             </p>
             <ul>
                 <li>
-                    20_hill은 어쩌구 저쩌구
-                    네모네모하는 네모네모하는 네모네모하는 네모네모하는
-                    네모네모하는 네모네모하는 네모네모하는 네모네모하는
-                    네모네모하는 네모네모하는 프로젝트입니다.
+                    <b>20_hill</b>은 다양한 분야의 유명인을 스무고개로 만들어 많은 사람들에게
+                    재미를 &nbsp;&nbsp; 선사하기 위해 대학생들이 모여 개발한 웹 스무고개 프로젝트입니다.
                 </li>
             </ul>
 
@@ -91,7 +90,7 @@
             </p>
             <ul>
                 <li>
-                    유명인들은 연예인, 스트리머, 유튜버, bj등이 포함되어 있습니다
+                    유명인들은 연예인, 스트리머, 유튜버, bj등이 포함되어 있습니다.
                 </li>
             </ul>
 
@@ -103,7 +102,7 @@
             </p>
             <ul>
                 <li>
-                    유명인 스무고개는 하루에 한 번만 플레이하실 수 있습니다. 모두가 동일한 정답을 가지기 때문입니다
+                    유명인 스무고개는 하루에 한 번만 플레이하실 수 있습니다. 모두가 동일한 정답을 가지기 때문입니다.
                 </li>
             </ul>
 

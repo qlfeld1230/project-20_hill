@@ -7,14 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>In Game</title>
 
-     <link rel="stylesheet" th:href="@{../static/css/page2.css}"/>
-<!--    <link rel="stylesheet" href="../static/CSS/page2.css"/>-->
-    
+    <link rel="stylesheet" th:href="@{/css/page2.css}"/>
 </head>
 <body>
-
-
-
     <div class="container">
     <div class="previous_question">
         이전 질문
@@ -51,15 +46,19 @@
 
     </div>
 
-    
 
+    
     <div style="text-align:center;" >
         <!--최종정답 db 연동-->
-        <input placeholder="정답을 입력하세요." type="text" id="answer_input" 
-        style="width: 500px; height: 50px; text-align: center; margin-top: 25px; margin-bottom: 15px;">
-        <button id="answer_button" style= "padding: 17px 40px; background: rgb(213, 235, 233); border:rgb(213, 235, 233);
-        ">정답</button>
-    
+        </form>
+        <form id="form" autocomplete="off" method="get" th:action="@{/gameover}">
+            <div id="name-wrapper" style="padding-top: 20px; ">
+                <input type="text" name="dummy" style="position: absolute; width: 0;height: 0;opacity: 0;">
+                <input oninvalid="this.setCustomValidity('공백은 입력할 수 없습니다')" required oninput="this.setCustomValidity('')" placeholder="정답을 입력하세요" type="text" id="name"
+                       style="width: 500px;height: 50px;text-align: center;">
+                <input type="submit" value="입력" id="name_button" style="cursor: pointer;padding: 17px 40px;">
+            </div>
+        </form>
     </div>
 
     <div class="question">
