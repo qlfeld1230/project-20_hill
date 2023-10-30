@@ -6,9 +6,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+import java.util.*;
 
 @Controller
 public class MainController {
+    private final TwentyQuestionService twentyQuestionService;
+
+
+    public MainController(TwentyQuestionService twentyQuestionService) {
+        this.twentyQuestionService = twentyQuestionService;
+    }
 
 
      @RequestMapping("/process")
@@ -32,6 +40,18 @@ public class MainController {
     @RequestMapping("/gameover")
     public String gameoverPage() {
         return "page5.html";
+    }
+
+    @GetMapping("qqq")
+    @ResponseBody
+    public List<TwentyQuestionTable> gettwentyQuestionTableList() {
+        return twentyQuestionService.gettwentyQuestionTableList();
+    }
+
+    @GetMapping("qq")
+    @ResponseBody
+    public TwentyQuestionTable get() {
+        return twentyQuestionService.findById(1L).get();
     }
 
 }
