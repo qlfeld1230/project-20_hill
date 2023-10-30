@@ -1,16 +1,15 @@
 package solid.project_20_hill.Repasitory.Controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
 import org.springframework.web.bind.annotation.*;
 import java.util.*;
 
 @Controller
-public class MainController {
+public class MainController{
     private final TwentyQuestionService twentyQuestionService;
 
 
@@ -51,7 +50,7 @@ public class MainController {
     @GetMapping("qq")
     @ResponseBody
     public TwentyQuestionTable get() {
-        return twentyQuestionService.findById(1L).get();
+        return twentyQuestionService.findById(2L).get();
     }
 
 }

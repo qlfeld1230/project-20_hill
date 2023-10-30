@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework:spring-jcl:5.3.30" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.springframework" artifactId="spring-jcl" version="5.3.30" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jcl/5.3.30/6851e13bd5e29ddbb5833e7c45322636a8606ac2/spring-jcl-5.3.30.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jcl/5.3.30/7a4c1f6852e568deb2a3c67bcf0f91a05b88e52c/spring-jcl-5.3.30-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,63 @@
+@import url("https://use.fontawesome.com/releases/v5.15.4/css/all.css");
+@import url("https://fonts.googleapis.com");
+@import url("https://fonts.gstatic.com");
+@import url("https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 50px;
+    padding-top: 150px;
+    font-family: 'Gamja Flower', cursive;
+    max-width: 640px;
+}
+
+
+a:link, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+
+nav {
+    position: fixed;
+    top: 0;
+    line-height: 60px;
+    width: 100%;
+    background-color: white;
+}
+
+.honor {
+    font-size: 80px;
+    margin: 0;
+    font-weight: 1200;
+    text-align: center;
+    background-color: white;
+}
+
+
+.hd {
+    height: 100%;
+    width: 100%;
+    text-align: right;
+    background-color: rgb(255, 252, 249);
+}
+
+.Rank {
+    width: auto;
+    height: 250px;
+    float: left;
+    margin-top: 20px;
+    clear: both;
+}
+
+ul.Rank_ > li {
+    float: left;
+    font-size: 25px;
+    font-weight: 50;
+    clear: both;
+    width: auto;
+    height: auto;
+} 

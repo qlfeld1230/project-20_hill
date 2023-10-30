@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Game</title>
+
+    <link rel="stylesheet" th:href="@{/css/page2.css}"/>
+</head>
+<body>
+
+    <div id="share"></div>
+    <script>
+        var hp = 4;
+    </script>
+
+    <div class="container">
+    <div class="previous_question">
+        이전 질문
+        <br>
+            <div class="box">
+                <div class="text">
+                    <!--이전 질문 db 연동-->
+                    트위치에서 방송을 하고 있나요?
+                </div>
+            </div>
+        </br>
+    </div>
+<!--        하트의 갯수를 4개로 한정함. 변수로 설정하는 것이 과제-->
+        <div class="hearts" th:class="image-container">
+            <span th:each="i : ${#numbers.sequence(1, 4)}">
+                <img th:src="@{/images/heart.jpg}" alt="이미지 설명" th:height="25" th:width="25">
+            </span>
+        </div>
+<!--        아래 질문과 하트를 분리하기 위한 코드-->
+        <p> &nbsp;</p>
+    <div class="answer" >
+        <!--해당 질문 정답(y/n) db 연동-->
+        응답
+        <div class="yesno">
+        <br>
+            <div class="yes">
+                네
+            </div>
+            <div class="no">
+                아니오
+            </div>
+        </div>
+    </div>
+    <script>
+
+    </script>
+<!--    <div style="text-align:center;" >-->
+<!--        <form id="form" autocomplete="off" method="get" th:action="@{/gameover}">-->
+<!--            <div id="name-wrapper" style="padding-top: 20px; ">-->
+<!--                <input type="text" name="dummy" style="position: absolute; width: 0;height: 0;opacity: 0;">-->
+<!--                <input id="wordInput" oninvalid="this.setCustomValidity('공백은 입력할 수 없습니다')" required oninput="this.setCustomValidity('')" placeholder="정답을 입력하세요" type="text"-->
+<!--                       style="width: 500px;height: 50px;text-align: center;">-->
+<!--                <input id="name_input" type="submit" value="입력" style="cursor: pointer;padding: 17px 40px;" maxlength="41">-->
+<!--            </div>-->
+<!--        </form>-->
+<!--    </div>-->
+        <div style="text-align:center;">
+            <form id="form" autocomplete="off" method="get" th:action="@{/gameover}">
+                <div id="name-wrapper" style="padding-top: 20px;">
+                    <input type="text" name="dummy" style="position: absolute; width: 0;height: 0;opacity: 0;">
+                    <input id="wordInput" oninvalid="this.setCustomValidity('공백은 입력할 수 없습니다')" required oninput="this.setCustomValidity('')" placeholder="정답을 입력하세요" type="text" style="width: 500px;height: 50px;text-align: center;">
+                    <input id="name_input" type="submit" value="입력" style="cursor: pointer;padding: 17px 40px;" maxlength="15">
+                </div>
+            </form>
+        </div>
+
+        <script>
+            document.getElementById("form").addEventListener("submit", function (event) {
+                event.preventDefault();
+                var inputValue = document.getElementById("wordInput").value;
+
+                if (inputValue === "nemo") {
+                    // Redirect to page3
+                    document.getElementById("form").action = "/success";
+                } else {
+                    // Redirect to page5 (default)
+                    document.getElementById("form").action = "/gameover";
+                }
+
+                // Submit the form after changing the action
+                document.getElementById("form").submit();
+            });
+        </script>
+
+    <div class="question">
+        <!--질문db 연동(how?)-->
+        <div class="circle">   
+            질문1
+        </div>
+        <div class="circle">   
+            질문2
+        </div>
+    </div>
+
+    <div class="question">
+        <!--질문db 연동(how?)-->
+        <div class="circle">   
+            뉴스에 보도된 적이 있나요? 아니면 그런 ~~
+        </div>
+        <div class="circle">   
+            000과 합방을 한 적이 있나요?
+        </div>
+    </div>
+</div>
+</body>
+</html>

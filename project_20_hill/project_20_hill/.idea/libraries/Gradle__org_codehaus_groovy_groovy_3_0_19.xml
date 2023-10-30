@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: org.codehaus.groovy:groovy:3.0.19" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.codehaus.groovy" artifactId="groovy" version="3.0.19" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy/3.0.19/92b51fe5bf7e9534d74f77daf5cf05d0f15c7ea5/groovy-3.0.19.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy/3.0.19/b40a9c8cee7427aa4f0b65cfd7f3084775f6a0b1/groovy-3.0.19-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

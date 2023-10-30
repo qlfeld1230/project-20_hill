@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.1" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.mybatis.spring.boot" artifactId="mybatis-spring-boot-starter" version="2.3.1" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis.spring.boot/mybatis-spring-boot-starter/2.3.1/b031f7fa6370ace72d05ad2a7fad7bb1940c26/mybatis-spring-boot-starter-2.3.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
