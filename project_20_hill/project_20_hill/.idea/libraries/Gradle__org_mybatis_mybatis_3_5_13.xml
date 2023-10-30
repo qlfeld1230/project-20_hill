@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: org.mybatis:mybatis:3.5.13" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.mybatis" artifactId="mybatis" version="3.5.13" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis/3.5.13/3d0aa73551884a6de6ca187fb4d2db50da002be9/mybatis-3.5.13.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis/3.5.13/41f1a762d65b8a5725dcab12c2ccef8348010664/mybatis-3.5.13-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

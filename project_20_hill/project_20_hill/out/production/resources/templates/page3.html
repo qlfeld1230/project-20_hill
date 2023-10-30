@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUCCESS</title>
+
+    <link rel="stylesheet" th:href="@{/CSS/page3.css}"/>
+
+</head>
+<body>
+    <div class= "container">
+        <!-- 시작 버튼 clcik > 서버에 저장된 이름DB 연동 > js로-->
+        <p id="displayArea"></p>
+
+        <br>
+        <!-- 서버에 저장된 정답DB 연동 -->
+        정답입니다!
+        <br>
+        <script>
+            <!-- DB연동 필요, 임시(정준하)-->
+            var name_player = "플레이어 이름";
+            var count = 3;
+            document.write(name_player+"님은 누적 "+count+"번 정답을 맞추셨습니다.")
+        </script>
+        내일도 다시 도전해 주세요!
+        </br>
+
+        <br>
+            <!-- page4 링크 연동 -->
+        <form id="form" autocomplete="off" method="get" th:action="@{/halloffame}">
+            <div id="name-wrapper" style="padding-top: 60px; ">
+                <input type="submit" value="명예의전당" id="name_button" style="cursor: pointer;padding: 17px 40px;font-size: 40px" >
+            </div>
+        </form>
+        </br>
+    </div>
+
+</body>
+</html>
