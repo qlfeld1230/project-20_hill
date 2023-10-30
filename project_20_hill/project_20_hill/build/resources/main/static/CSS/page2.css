@@ -11,6 +11,8 @@ body .container {
 }
 
 .box {
+    text-align: center;
+    align-items: center;
     width: 250px;
     height: 50px;
     border: 3px solid rgb(213, 235, 233); 
@@ -33,6 +35,8 @@ body .container {
 .answer{
   display: inline-block;
   width:210px;
+    float: right;
+    margin-bottom: 10px;
 }
 
 .yesno{
@@ -52,7 +56,10 @@ body .container {
     justify-content: center; 
     align-items: center; 
 }
-
+.hearts{
+    float: right;
+    display: inline;
+}
 .no{
     width: 90px;
     height: 90px;
@@ -66,6 +73,7 @@ body .container {
 
 
 .question {
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,3 +93,7 @@ body .container {
     font-size: 15px;
     box-sizing: border-box;
   }
+.image-container img {
+    margin-right: 10px; /* 이미지 간 간격을 조절할 수 있습니다. */
+    float: right;
+}

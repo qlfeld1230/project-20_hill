@@ -16,12 +16,11 @@ public class MainController {
          // 이 부분에 database에 username을 save하는 부분을 넣는다.
          //User user = new User(name);
          //userRepository.save(user);
-
          return "page2.html";
      }
 
-    @RequestMapping("/gameover")
-    public String gameoverPage() {
+    @RequestMapping("/success")
+    public String successPage() {
         return "page3.html";
     }
 
@@ -29,4 +28,10 @@ public class MainController {
     public String halloffamePage() {
         return "page4.html";
     }
+
+    @RequestMapping("/gameover")
+    public String gameoverPage() {
+        return "page5.html";
+    }
+
 }

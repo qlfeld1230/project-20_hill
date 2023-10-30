@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUCCESS</title>
+    <title>Game Over</title>
 
     <link rel="stylesheet" th:href="@{/CSS/page3.css}"/>
 
@@ -17,16 +17,14 @@
 
         <br>
         <!-- 서버에 저장된 정답DB 연동 -->
-        정답입니다!
-        <br>
         <script>
             <!-- DB연동 필요, 임시(정준하)-->
-            var name_player = "플레이어 이름";
-            var count = 3;
-            document.write(name_player+"님은 누적 "+count+"번 정답을 맞추셨습니다.")
+            var name_today = "정준하"
+            document.write("오늘의 정답은 '" + name_today+"'였습니다.")
         </script>
-        내일도 다시 도전해 주세요!
         </br>
+
+        내일도 다시 도전해 주세요!
 
         <br>
             <!-- page4 링크 연동 -->
