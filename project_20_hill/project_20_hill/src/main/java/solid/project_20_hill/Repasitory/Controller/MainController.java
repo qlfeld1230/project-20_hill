@@ -18,7 +18,6 @@ public class MainController {
         this.twentyQuestionService = twentyQuestionService;
     }
 
-
      @RequestMapping("/process")
      public String mainPage() {
          // 이 부분에 database에 username을 save하는 부분을 넣는다.
