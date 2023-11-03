@@ -67,7 +67,8 @@
                 event.preventDefault();
                 var inputValue = document.getElementById("wordInput").value;
 
-                if (inputValue === "nemo") {
+                // nemo 부분을 데이터베이스에서 뺴오기.
+                if (inputValue === "정준하") {
                     // Redirect to page3
                     document.getElementById("form").action = "/success";
                 } else {
@@ -79,26 +80,12 @@
                 document.getElementById("form").submit();
             });
         </script>
-
     <div class="question">
-        <!--질문db 연동(how?)-->
-        <div class="circle">   
-            질문1
-        </div>
-        <div class="circle">   
-            질문2
-        </div>
-    </div>
-
-    <div class="question">
-        <!--질문db 연동(how?)-->
-        <div class="circle">   
-            뉴스에 보도된 적이 있나요? 아니면 그런 ~~
-        </div>
-        <div class="circle">   
-            000과 합방을 한 적이 있나요?
-        </div>
-    </div>
+        <tr th:each="question : ${questions}">
+            <div class="circle">
+                <td th:text="${question.question}"></td>
+            </div>
+         </tr>
 </div>
 </body>
 </html>

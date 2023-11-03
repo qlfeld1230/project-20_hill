@@ -54,7 +54,10 @@
         </div>
 
         <!-- 보안 필요시 POST방식 사용-->
-        <form id="form" autocomplete="off" method="post" th:action="@{/process}">
+<!--        <form id="form" autocomplete="off" method="get" th:action="@{/process}">-->
+
+            <form id="form" autocomplete="off" method="get" action="/page2">
+
             <div id="name-wrapper" style="padding-top: 20px; ">
                 <input type="text" name="dummy" style="position: absolute; width: 0;height: 0;opacity: 0;">
                 <input oninvalid="this.setCustomValidity('이름은 반드시 입력해야 합니다.')" required oninput="this.setCustomValidity('')" placeholder="이름을 입력하세요" type="text" id="name"
