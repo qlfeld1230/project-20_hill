@@ -21,26 +21,16 @@
         이전 질문
         <br>
             <div class="box">
-                <div class="text" id="previousQuestionBox">
-                </div>
+                <div class="text" th:text="${name}"> </div>
             </div>
         </br>
     </div>
-<!--&lt;!&ndash;        하트의 갯수를 4개로 한정함. 변수로 설정하는 것이 과제&ndash;&gt;-->
-<!--        <div class="hearts" th:class="image-container">-->
-<!--            <span th:each="i : ${#numbers.sequence(1, 4)}">-->
-<!--                <img th:src="@{/images/heart.jpg}" alt="이미지 설명" th:height="25" th:width="25">-->
-<!--            </span>-->
-<!--        </div>-->
-        <p> &nbsp;</p>
+
     <div class="answer">
         <!--해당 질문 정답(y/n) db 연동-->
-<!--        <div style="float: right">응답</div>-->
+        <div style="float: right">응답</div>
         <div class="yesno">
-        <br><br><br>
-            <div class="yes" id="previousQuestionBoxYesOrNo">
-
-            </div>
+            네
         </div>
     </div>
     <script>
@@ -74,51 +64,43 @@
                 document.getElementById("form").submit();
             });
         </script>
-<!--    <div class="question">-->
-<!--        <tr th:each="question : ${questions}" onclick="handleButtonClick(this)">-->
-<!--            <button type="button" th:class="circle">-->
-<!--                <td th:text="${question.question}" ></td>-->
-<!--            </button>-->
-<!--        </tr>-->
-<!--    </div>-->
         <div class="question">
-            <div>
-                <tr th:each="question : ${questions}" onclick="handleButtonClick(this)">
+            <table>
+                <tr th:each="questions : ${questions}" onclick="handleButtonClick(this)">
                     <td>
                         <button type="button" class="circle">
-                            <span th:text="${question.question}" ></span>
+                            <span th:text="${questions.question}" ></span>
                         </button>
                     </td>
                 </tr>
-            </div>
+            </table>
         </div>
 
-        <script>
+        <script th:inline="javascript">
             let selectedQuestion = ""; // 선택된 질문을 저장할 변수
+            let count = [[${count}]]
 
             function handleButtonClick(element) {
                 // 클릭된 버튼의 텍스트 값을 변수에 저장
                 selectedQuestion = element.querySelector('span').innerText;
 
-                updatePreviousQuestion(selectedQuestion);
-                updatePreviousQustionYesOrNo(selectedQuestion);
+                const form = document.createElement('form');
+                form.setAttribute('method', 'post');
+                form.setAttribute('action', '/page2')
 
-            }
+                const data = document.createElement('input');
+                data.setAttribute('name', 'name')
+                data.setAttribute('value', selectedQuestion);
 
-            function updatePreviousQuestion(questionText) {
-                // 이전 질문 상자의 내용을 업데이트
-                const previousQuestionBox = document.getElementById('previousQuestionBox');
-                previousQuestionBox.innerHTML = questionText;
-            }
+                const data2 = document.createElement('input');
+                data.setAttribute('name', 'count');
+                data.setAttribute('value', count.toString());
 
-            function updatePreviousQustionYesOrNo(questionText) {
-                const previousQuestionBox = document.getElementById('previousQuestionBoxYesOrNo');
-                let text = "네"
+                form.appendChild(data);
+                form.appendChild(data2);
+                document.body.appendChild(form);
 
-                // if(데이터 베이스 연결, 정답 테이블에 질문 넣어서 N이 오면)
-                //     text = "아니오"
-
-                previousQuestionBox.innerHTML = text;
+                form.submit();
             }
         </script>
 </div>

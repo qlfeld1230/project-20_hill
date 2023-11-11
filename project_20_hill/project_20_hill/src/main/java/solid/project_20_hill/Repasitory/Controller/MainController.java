@@ -46,14 +46,26 @@ public class MainController{
 
         // 모델에 선택한 질문을 추가
         model.addAttribute("questions", selectedQuestions);
-
+        model.addAttribute("count",0);
         return "/page2";
+    }
+
+    @PostMapping(value = "/page2", consumes = "application/x-www-form-urlencoded")
+    public String viewButton(Dto dto, Model model) {
+        model.addAttribute("name", dto.name);
+
+        List<TwentyQuestionTable> allQuestions = twentyQuestionService.gettwentyQuestionTableList();
+        List<TwentyQuestionTable> questions = getRandomQuestions(allQuestions, 4);
+
+        model.addAttribute("questions", questions);
+        model.addAttribute("count", dto.count+1);
+
+        return"/page2";
     }
 
     private List<TwentyQuestionTable> getRandomQuestions(List<TwentyQuestionTable> questions, int count) {
         List<TwentyQuestionTable> randomQuestions = new ArrayList<>();
         Random random = new Random();
-
         while (randomQuestions.size() < count && !questions.isEmpty()) {
             int index = random.nextInt(questions.size());
             TwentyQuestionTable question = questions.remove(index);
