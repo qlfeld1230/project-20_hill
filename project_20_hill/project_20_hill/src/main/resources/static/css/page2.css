@@ -71,27 +71,27 @@ body .container {
     align-items: center;
 }
 
-
 .question {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* 버튼 간격 조절 */
+    text-align: center; /* 버튼 안의 텍스트 중앙 정렬 */
 }
 
 .circle {
-    width: 300px;
+    width: 400px;
     height: 100px;
     border-radius: 10%; /* 둥근 모양 */
     margin: 15px;
     background: rgb(213, 235, 233);
+    border-color: rgb(213, 235, 233);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 15px;
     box-sizing: border-box;
-  }
+}
 .image-container img {
     margin-right: 10px; /* 이미지 간 간격을 조절할 수 있습니다. */
     float: right;

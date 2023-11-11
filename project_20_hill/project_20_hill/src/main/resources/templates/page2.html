@@ -21,9 +21,7 @@
         이전 질문
         <br>
             <div class="box">
-                <div class="text">
-                    <!--이전 질문 db 연동-->
-                    트위치에서 방송을 하고 있나요?
+                <div class="text" id="previousQuestionBox">
                 </div>
             </div>
         </br>
@@ -40,12 +38,7 @@
         응답
         <div class="yesno">
         <br>
-            <div class="yes">
-                네
-            </div>
-            <div class="no">
-                아니오
-            </div>
+            <div class="text" id="pre"></div>
         </div>
     </div>
     <script>
@@ -79,18 +72,50 @@
                 document.getElementById("form").submit();
             });
         </script>
-    <div class="question">
-        <tr th:each="question : ${questions}" onclick="handleButtonClick()">
-            <button type="button" th:class="circle">
-                <td th:text="${question.question}"></td>
-            </button>
-        </tr>
-    </div>
+<!--    <div class="question">-->
+<!--        <tr th:each="question : ${questions}" onclick="handleButtonClick(this)">-->
+<!--            <button type="button" th:class="circle">-->
+<!--                <td th:text="${question.question}" ></td>-->
+<!--            </button>-->
+<!--        </tr>-->
+<!--    </div>-->
+        <div class="question">
+            <table>
+                <tr th:each="question : ${questions}" onclick="handleButtonClick(this)">
+                    <td>
+                        <button type="button" class="circle">
+                            <span th:text="${question.question}" ></span>
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </div>
 
         <script>
-            // button click
-            function handleButtonClick() {
+            let selectedQuestion = ""; // 선택된 질문을 저장할 변수
 
+            function handleButtonClick(element) {
+                // 클릭된 버튼의 텍스트 값을 변수에 저장
+                selectedQuestion = element.querySelector('span').innerText;
+
+                updatePreviousQuestion(selectedQuestion);
+                updatePreviousQustionYesOrNo(selectedQuestion);
+            }
+
+            function updatePreviousQuestion(questionText) {
+                // 이전 질문 상자의 내용을 업데이트
+                const previousQuestionBox = document.getElementById('previousQuestionBox');
+                previousQuestionBox.innerHTML = questionText;
+            }
+
+            function updatePreviousQustionYesOrNo(questionText) {
+                const previousQuestionBox = document.getElementById('previousQuestionBoxYesOrNo');
+                let text = "네"
+
+                // if(데이터 베이스 연결, 정답 테이블에 질문 넣어서 N이 오면)
+                //     text = "아니오"
+
+                previousQuestionBox.innerHTML = text;
             }
         </script>
 </div>
