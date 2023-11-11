@@ -33,12 +33,14 @@
 <!--            </span>-->
 <!--        </div>-->
         <p> &nbsp;</p>
-    <div class="answer" >
+    <div class="answer">
         <!--해당 질문 정답(y/n) db 연동-->
-        응답
+<!--        <div style="float: right">응답</div>-->
         <div class="yesno">
-        <br>
-            <div class="text" id="pre"></div>
+        <br><br><br>
+            <div class="yes" id="previousQuestionBoxYesOrNo">
+
+            </div>
         </div>
     </div>
     <script>
@@ -100,6 +102,7 @@
 
                 updatePreviousQuestion(selectedQuestion);
                 updatePreviousQustionYesOrNo(selectedQuestion);
+
             }
 
             function updatePreviousQuestion(questionText) {
