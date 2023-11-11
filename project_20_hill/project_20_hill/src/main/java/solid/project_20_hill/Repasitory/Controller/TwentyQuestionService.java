@@ -14,7 +14,6 @@ public class TwentyQuestionService {
     private TwentyQuestionRepository twentyQuestionRepository;
 
     public List<TwentyQuestionTable> gettwentyQuestionTableList() {
-        System.out.println("이 함수는 실행 중 입니다.");
         return twentyQuestionRepository.findAll();
     }
 

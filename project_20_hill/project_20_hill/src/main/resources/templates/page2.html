@@ -11,10 +11,10 @@
 </head>
 <body>
 
-    <div id="share"></div>
-    <script>
-        var hp = 4;
-    </script>
+<!--    <div id="share"></div>-->
+<!--    <script>-->
+<!--        var hp = 4;-->
+<!--    </script>-->
 
     <div class="container">
     <div class="previous_question">
@@ -28,13 +28,12 @@
             </div>
         </br>
     </div>
-<!--        하트의 갯수를 4개로 한정함. 변수로 설정하는 것이 과제-->
-        <div class="hearts" th:class="image-container">
-            <span th:each="i : ${#numbers.sequence(1, 4)}">
-                <img th:src="@{/images/heart.jpg}" alt="이미지 설명" th:height="25" th:width="25">
-            </span>
-        </div>
-<!--        아래 질문과 하트를 분리하기 위한 코드-->
+<!--&lt;!&ndash;        하트의 갯수를 4개로 한정함. 변수로 설정하는 것이 과제&ndash;&gt;-->
+<!--        <div class="hearts" th:class="image-container">-->
+<!--            <span th:each="i : ${#numbers.sequence(1, 4)}">-->
+<!--                <img th:src="@{/images/heart.jpg}" alt="이미지 설명" th:height="25" th:width="25">-->
+<!--            </span>-->
+<!--        </div>-->
         <p> &nbsp;</p>
     <div class="answer" >
         <!--해당 질문 정답(y/n) db 연동-->
@@ -67,7 +66,7 @@
                 event.preventDefault();
                 var inputValue = document.getElementById("wordInput").value;
 
-                // nemo 부분을 데이터베이스에서 뺴오기.
+                // 정답 부분을 데이터베이스에서 뺴오기.
                 if (inputValue === "정준하") {
                     // Redirect to page3
                     document.getElementById("form").action = "/success";
@@ -81,11 +80,19 @@
             });
         </script>
     <div class="question">
-        <tr th:each="question : ${questions}">
-            <div class="circle">
+        <tr th:each="question : ${questions}" onclick="handleButtonClick()">
+            <button type="button" th:class="circle">
                 <td th:text="${question.question}"></td>
-            </div>
-         </tr>
+            </button>
+        </tr>
+    </div>
+
+        <script>
+            // button click
+            function handleButtonClick() {
+
+            }
+        </script>
 </div>
 </body>
 </html>
