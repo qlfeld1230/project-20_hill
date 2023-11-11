@@ -34,25 +34,25 @@ public class MainController{
         return "/page5";
     }
 
-    @GetMapping("/page2")
-    public String getPage2(Model model) {
-        List<TwentyQuestionTable> allQuestions = twentyQuestionService.gettwentyQuestionTableList();
-
-        // 무작위로 4개의 질문 선택
-        List<TwentyQuestionTable> selectedQuestions = getRandomQuestions(allQuestions, 4);
-
-        // 선택한 질문을 사용한 질문 목록에 추가
-        usedQuestions.addAll(selectedQuestions);
-
-        // 모델에 선택한 질문을 추가
-        model.addAttribute("questions", selectedQuestions);
-        model.addAttribute("count",0);
-        return "/page2";
-    }
+//    @GetMapping("/page2")
+//    public String getPage2(Model model) {
+//        List<TwentyQuestionTable> allQuestions = twentyQuestionService.gettwentyQuestionTableList();
+//
+//        // 무작위로 4개의 질문 선택
+//        List<TwentyQuestionTable> selectedQuestions = getRandomQuestions(allQuestions, 4);
+//
+//        // 선택한 질문을 사용한 질문 목록에 추가
+//        usedQuestions.addAll(selectedQuestions);
+//
+//        // 모델에 선택한 질문을 추가
+//        model.addAttribute("questions", selectedQuestions);
+//        model.addAttribute("count",0);
+//        return "/page2";
+//    }
 
     @PostMapping(value = "/page2", consumes = "application/x-www-form-urlencoded")
     public String viewButton(Dto dto, Model model) {
-        model.addAttribute("name", dto.name);
+        model.addAttribute("name", dto.question);
 
         List<TwentyQuestionTable> allQuestions = twentyQuestionService.gettwentyQuestionTableList();
         List<TwentyQuestionTable> questions = getRandomQuestions(allQuestions, 4);

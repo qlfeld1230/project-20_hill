@@ -79,6 +79,7 @@
         <script th:inline="javascript">
             let selectedQuestion = ""; // 선택된 질문을 저장할 변수
             let count = [[${count}]]
+            let userName = [[${userName}]]
 
             function handleButtonClick(element) {
                 // 클릭된 버튼의 텍스트 값을 변수에 저장
@@ -89,15 +90,23 @@
                 form.setAttribute('action', '/page2')
 
                 const data = document.createElement('input');
-                data.setAttribute('name', 'name')
+                data.setAttribute('name', 'question')
                 data.setAttribute('value', selectedQuestion);
+                data.setAttribute('type', 'text')
 
                 const data2 = document.createElement('input');
                 data.setAttribute('name', 'count');
                 data.setAttribute('value', count.toString());
 
+                const data3 = document.createElement('input');
+                data.setAttribute('name', 'userName');
+                data.setAttribute('value', userName);
+                data.setAttribute('type', 'text')
+
                 form.appendChild(data);
                 form.appendChild(data2);
+                form.appendChild(data3);
+
                 document.body.appendChild(form);
 
                 form.submit();

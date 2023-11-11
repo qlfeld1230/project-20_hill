@@ -1,27 +1,38 @@
 package solid.project_20_hill.Repasitory.Controller;
 
 public class Dto {
-    String name;
+    String question;
     int count;
+    String userName;
 
-    public Dto(String name, int count) {
-        this.name = name;
+    public Dto(String question, int count, String userName) {
+        this.question = question;
         this.count = count;
+        this.userName = userName;
+    }
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
     }
 
     public int getCount() {
         return count;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
     public void setCount(int count) {
         this.count = count;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 }
