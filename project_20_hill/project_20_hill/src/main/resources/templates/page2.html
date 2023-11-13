@@ -8,6 +8,12 @@
     <title>In Game</title>
 
     <link rel="stylesheet" th:href="@{/css/page2.css}"/>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <link rel="icon1" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon2" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="icon3" type="image/png" sizes="192x192" href="../images/android-chrome-192x192.png">
+    <link rel="icon4" type="image/png" sizes="512x512" href="../images/android-chrome-512x512.png">
 </head>
 <body>
 
@@ -95,13 +101,13 @@
                 data.setAttribute('type', 'text')
 
                 const data2 = document.createElement('input');
-                data.setAttribute('name', 'count');
-                data.setAttribute('value', count.toString());
+                data2.setAttribute('name', 'count');
+                data2.setAttribute('value', count.toString());
 
                 const data3 = document.createElement('input');
-                data.setAttribute('name', 'userName');
-                data.setAttribute('value', userName);
-                data.setAttribute('type', 'text')
+                data3.setAttribute('name', 'userName');
+                data3.setAttribute('value', userName);
+                data3.setAttribute('type', 'text')
 
                 form.appendChild(data);
                 form.appendChild(data2);
