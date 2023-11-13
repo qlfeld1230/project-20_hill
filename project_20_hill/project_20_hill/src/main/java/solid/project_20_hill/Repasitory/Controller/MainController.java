@@ -13,11 +13,37 @@ import java.util.*;
 public class MainController{
     private final TwentyQuestionService twentyQuestionService;
     private List<TwentyQuestionTable> usedQuestions = new ArrayList<>();
+    private final Gian84Service gian84Service;
+    private final ItsupService itsupService;
+    private final UkmanService ukmanService;
 
-
-    public MainController(TwentyQuestionService twentyQuestionService) {
+    public MainController(TwentyQuestionService twentyQuestionService, Gian84Service gian84Service, ItsupService itsupService, UkmanService ukmanService) {
         this.twentyQuestionService = twentyQuestionService;
+        this.gian84Service = gian84Service;
+        this.itsupService = itsupService;
+        this.ukmanService = ukmanService;
     }
+
+    @GetMapping("/gian84")
+    @ResponseBody
+    public Optional<Gian84Table> getGian84(){
+        return gian84Service.findById(3L);
+    }
+
+
+    @GetMapping("/itsup")
+    @ResponseBody
+    public Optional<ItsupTable> getitsup(){
+        return itsupService.findById(4L);
+    }
+
+
+    @GetMapping("/ukman")
+    @ResponseBody
+    public Optional<UkmanTable> getukman(){
+        return ukmanService.findById(5L);
+    }
+
 
     @RequestMapping("/success")
     public String successPage() {
