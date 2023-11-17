@@ -47,7 +47,9 @@ public class MainController{
 //    }
 
     @RequestMapping("/success")
-    public String successPage() {
+    public String successPage(Dto dto, Model model) {
+
+        model.addAttribute("userName",dto.userName);
         return "/page3";
     }
 
@@ -90,6 +92,8 @@ public class MainController{
         List<TwentyQuestionTable> allQuestions = twentyQuestionService.gettwentyQuestionTableList();
         List<TwentyQuestionTable> questions = getRandomQuestions(allQuestions, 4);
         List<TwentyQuestionTable> getQuestion = twentyQuestionService.findByQuestion(dto.question);
+
+        // 매일 바꿀 부분
         List<Gian84Table> getGianTable;
 
         String question = "";
@@ -108,6 +112,8 @@ public class MainController{
         if (matcher.find()) {
             id = Long.parseLong(matcher.group(1));
         }
+
+        // 매일 바꿀 부분
         extractedString = gian84Service.findById(id).toString();
 
         int startIndex = extractedString.indexOf("answer=") + "answer=".length();
@@ -120,7 +126,6 @@ public class MainController{
         model.addAttribute("questions", questions);
         model.addAttribute("count", dto.count+1);
         model.addAttribute("YorN", YorN);
-        model.addAttribute("userName",dto.userName);
 
         return"/page2";
     }
