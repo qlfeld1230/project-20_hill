@@ -16,24 +16,24 @@
     <link rel="icon4" type="image/png" sizes="512x512" href="../images/android-chrome-512x512.png">
 </head>
 <body>
-    <div class="container" style="height: 100%" >
+<div class="container" style="height: 100%" >
     <div class="previous_question">
         이전 질문
         <br>
-            <div class="box" style="display: inline-block">
-                <div class="text" th:text="${name}"> </div>
-            </div>
+        <div class="box" style="display: inline-block">
+            <div class="text" th:text="${name}"> </div>
+        </div>
+        </br>
     </div>
 
-    <div class="previous_question">
+    <div class="answer">
         선택한 질문에 대한 답변
-        <div class="box">
+        <br>
+        <div class="yn" style="display: inline-block">
             <div class="text" th:text="${YorN}"> </div>
         </div>
+        </br>
     </div>
-    <script>
-
-    </script>
         <div style="text-align:center;">
             <form id="form" autocomplete="off" method="get" th:action="@{/gameover}">
                 <div id="name-wrapper" style="padding-top: 20px;">
@@ -54,7 +54,7 @@
                 // 매일 바꿀 부분
                 if (inputValue === "기안84") {
                     // Redirect to page3
-                    document.getElementById("form").action = "/success";
+                    // document.getElementById("form").action = "/success";
 
                     // const form = document.createElement('form');
                     // form.setAttribute('method', 'post');
