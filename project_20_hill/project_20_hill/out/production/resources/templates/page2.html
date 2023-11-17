@@ -48,11 +48,26 @@
             document.getElementById("form").addEventListener("submit", function (event) {
                 event.preventDefault();
                 var inputValue = document.getElementById("wordInput").value;
+                // let userName = [[${userName}]]
 
                 // 정답 부분을 데이터베이스에서 뺴오기.
+                // 매일 바꿀 부분
                 if (inputValue === "기안84") {
                     // Redirect to page3
                     document.getElementById("form").action = "/success";
+
+                    // const form = document.createElement('form');
+                    // form.setAttribute('method', 'post');
+                    // form.setAttribute('action', '/success')
+                    //
+                    // const data = document.createElement('input');
+                    // data.setAttribute('name', 'userName')
+                    //
+                    // form.appendChild(data);
+                    // document.body.appendChild(form);
+                    //
+                    // form.submit();
+
                 } else {
                     // Redirect to page5 (default)
                     document.getElementById("form").action = "/gameover";
