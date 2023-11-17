@@ -29,8 +29,9 @@
     <div class="answer">
         <!--해당 질문 정답(y/n) db 연동-->
         <div class="response">선택한 질문에 대한 대답</div>
-        <div class="yes">네</div>
-        <div class="no">아니오</div>
+        <div class="box">
+            <div class="text" th:text="${YorN}"> </div>
+        </div>
     </div>
     <script>
 
@@ -51,7 +52,7 @@
                 var inputValue = document.getElementById("wordInput").value;
 
                 // 정답 부분을 데이터베이스에서 뺴오기.
-                if (inputValue === "정준하") {
+                if (inputValue === "기안84") {
                     // Redirect to page3
                     document.getElementById("form").action = "/success";
                 } else {
@@ -78,6 +79,7 @@
             let selectedQuestion = ""; // 선택된 질문을 저장할 변수
             let count = [[${count}]]
             let userName = [[${userName}]]
+            let YorN = [[${YorN}]]
 
             function handleButtonClick(element) {
                 // 클릭된 버튼의 텍스트 값을 변수에 저장
@@ -101,9 +103,15 @@
                 data3.setAttribute('value', userName);
                 data3.setAttribute('type', 'text')
 
+                const data4 = document.createElement('input');
+                data3.setAttribute('name', 'YorN');
+                data3.setAttribute('value', YorN);
+                data3.setAttribute('type', 'text')
+
                 form.appendChild(data);
                 form.appendChild(data2);
                 form.appendChild(data3);
+                form.appendChild(data4);
 
                 document.body.appendChild(form);
 

@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.*;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @Controller
 public class MainController{
@@ -44,12 +46,6 @@ public class MainController{
         return ukmanService.findById(5L);
     }
 
-    @GetMapping("/question")
-    @ResponseBody
-    public List<TwentyQuestionTable> getQuestion(){
-        return twentyQuestionService.findByQuestion("먹방을 주로 합니까?");
-    }
-
     @RequestMapping("/success")
     public String successPage() {
         return "/page3";
@@ -81,15 +77,44 @@ public class MainController{
 //        return "/page2";
 //    }
 
+    @GetMapping("/question")
+    @ResponseBody
+    public List<TwentyQuestionTable> getQuestion(){
+        return twentyQuestionService.findByQuestion("먹방을 주로 합니까?");
+    }
+
     @PostMapping(value = "/page2", consumes = "application/x-www-form-urlencoded")
     public String viewButton(Dto dto, Model model) {
         model.addAttribute("name", dto.question);
 
         List<TwentyQuestionTable> allQuestions = twentyQuestionService.gettwentyQuestionTableList();
         List<TwentyQuestionTable> questions = getRandomQuestions(allQuestions, 4);
+        List<TwentyQuestionTable> getQuestion = twentyQuestionService.findByQuestion(dto.question);
+        List<Gian84Table> getGianTable;
+
+        // question에서 id추출
+        Pattern pattern = Pattern.compile("id=(\\d+)");
+        Matcher matcher = pattern.matcher(getQuestion.get(0).toString());
+
+        Long id = 0L;
+        String extractedString = "";
+        String YorN = "";
+
+        if (matcher.find()) {
+            id = Long.parseLong(matcher.group(1));
+        }
+        extractedString = gian84Service.findById(id).toString();
+
+        int startIndex = extractedString.indexOf("answer=") + "answer=".length();
+        int endIndex = extractedString.indexOf(")]");
+
+        if (startIndex >= 0 && endIndex >= 0) {
+            YorN = extractedString.substring(startIndex, endIndex);
+        }
 
         model.addAttribute("questions", questions);
         model.addAttribute("count", dto.count+1);
+        model.addAttribute("YorN", YorN);
 
         return"/page2";
     }
