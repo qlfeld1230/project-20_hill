@@ -9,7 +9,13 @@ body .container {
   margin-right: 134px;
   font-size: 15px;
   display: flex;
-  flex-wrap: nowrap;
+}
+
+.answer {
+    margin-top: 20px;
+    margin-right: 134px;
+    font-size: 15px;
+    display: flex;
 }
 
 .box {
@@ -30,25 +36,6 @@ body .container {
     box-sizing: border-box;
     align-items: center;
   }
-
-.answer {
-  margin-top: 20px;
-  margin-right: 134px;
-  font-size: 15px;
-  display: flex;
-  flex-wrap: nowrap;
-  }
-
-.yn {
-    text-align: center;
-    align-items: center;
-    width: 250px;
-    height: 50px;
-    border-radius: 10%; /* 동그라미 */
-    border: 3px solid rgb(213, 235, 233);
-    padding: 15px;
-    margin-top: 15px;
-    }
 
 .circle {
     width: 100%;

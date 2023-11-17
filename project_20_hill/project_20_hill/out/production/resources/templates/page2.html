@@ -23,16 +23,14 @@
         <div class="box" style="display: inline-block">
             <div class="text" th:text="${name}"> </div>
         </div>
-        </br>
     </div>
 
     <div class="answer">
         선택한 질문에 대한 답변
         <br>
-        <div class="yn" style="display: inline-block">
+        <div class="box">
             <div class="text" th:text="${YorN}"> </div>
         </div>
-        </br>
     </div>
         <div style="text-align:center;">
             <form id="form" autocomplete="off" method="get" th:action="@{/gameover}">
@@ -52,8 +50,7 @@
                 // 매일 바꿀 부분
                 if (inputValue === "기안84") {
                     // Redirect to page3
-                    // document.getElementById("form").action = "/success";
-
+                    document.getElementById("form").action = "/success";
 
                 } else {
                     // Redirect to page5 (default)
