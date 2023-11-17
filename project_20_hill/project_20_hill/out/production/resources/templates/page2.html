@@ -20,15 +20,13 @@
     <div class="previous_question">
         이전 질문
         <br>
-            <div class="box">
+            <div class="box" style="display: inline-block">
                 <div class="text" th:text="${name}"> </div>
             </div>
-        </br>
     </div>
 
-    <div class="answer">
-        <!--해당 질문 정답(y/n) db 연동-->
-        <div class="response">선택한 질문에 대한 대답</div>
+    <div class="previous_question">
+        선택한 질문에 대한 답변
         <div class="box">
             <div class="text" th:text="${YorN}"> </div>
         </div>

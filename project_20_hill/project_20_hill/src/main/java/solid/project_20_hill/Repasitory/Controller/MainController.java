@@ -26,25 +26,25 @@ public class MainController{
         this.ukmanService = ukmanService;
     }
 
-    @GetMapping("/gian84")
-    @ResponseBody
-    public List<Gian84Table> getGian84(){
-        return gian84Service.findByAnswer("아니오");
-    }
-
-
-    @GetMapping("/itsup")
-    @ResponseBody
-    public Optional<ItsupTable> getItsup(){
-        return itsupService.findById(4L);
-    }
-
-
-    @GetMapping("/ukman")
-    @ResponseBody
-    public Optional<UkmanTable> getUkman(){
-        return ukmanService.findById(5L);
-    }
+//    @GetMapping("/gian84")
+//    @ResponseBody
+//    public List<Gian84Table> getGian84(){
+//        return gian84Service.findByAnswer("아니오");
+//    }
+//
+//
+//    @GetMapping("/itsup")
+//    @ResponseBody
+//    public Optional<ItsupTable> getItsup(){
+//        return itsupService.findById(4L);
+//    }
+//
+//
+//    @GetMapping("/ukman")
+//    @ResponseBody
+//    public Optional<UkmanTable> getUkman(){
+//        return ukmanService.findById(5L);
+//    }
 
     @RequestMapping("/success")
     public String successPage() {
@@ -77,11 +77,11 @@ public class MainController{
 //        return "/page2";
 //    }
 
-    @GetMapping("/question")
-    @ResponseBody
-    public List<TwentyQuestionTable> getQuestion(){
-        return twentyQuestionService.findByQuestion("먹방을 주로 합니까?");
-    }
+//    @GetMapping("/question")
+//    @ResponseBody
+//    public List<TwentyQuestionTable> getQuestion(){
+//        return twentyQuestionService.findByQuestion("먹방을 주로 합니까?");
+//    }
 
     @PostMapping(value = "/page2", consumes = "application/x-www-form-urlencoded")
     public String viewButton(Dto dto, Model model) {
@@ -92,9 +92,14 @@ public class MainController{
         List<TwentyQuestionTable> getQuestion = twentyQuestionService.findByQuestion(dto.question);
         List<Gian84Table> getGianTable;
 
+        String question = "";
         // question에서 id추출
         Pattern pattern = Pattern.compile("id=(\\d+)");
-        Matcher matcher = pattern.matcher(getQuestion.get(0).toString());
+
+        if(!getQuestion.isEmpty())
+            question = getQuestion.get(0).toString();
+
+        Matcher matcher = pattern.matcher(question);
 
         Long id = 0L;
         String extractedString = "";
