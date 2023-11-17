@@ -16,13 +16,7 @@
     <link rel="icon4" type="image/png" sizes="512x512" href="../images/android-chrome-512x512.png">
 </head>
 <body>
-
-<!--    <div id="share"></div>-->
-<!--    <script>-->
-<!--        var hp = 4;-->
-<!--    </script>-->
-
-    <div class="container">
+    <div class="container" style="height: 100%">
     <div class="previous_question">
         이전 질문
         <br>
@@ -71,17 +65,16 @@
             });
         </script>
         <div class="question">
-            <table>
+            <table style="table-layout: fixed">
                 <tr th:each="questions : ${questions}" onclick="handleButtonClick(this)">
-                    <td>
-                        <button type="button" class="circle">
-                            <span th:text="${questions.question}" ></span>
+                    <td class="circle" style="width: 640px; height: 100px; box-sizing: border-box;">
+                        <button type="button" class="circle" style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; border: none; border-radius: 10%; background: rgb(213, 235, 233); overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
+                            <span th:text="${questions.question}"></span>
                         </button>
                     </td>
                 </tr>
             </table>
         </div>
-
         <script th:inline="javascript">
             let selectedQuestion = ""; // 선택된 질문을 저장할 변수
             let count = [[${count}]]
