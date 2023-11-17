@@ -34,25 +34,30 @@ body .container {
 
 .answer{
   display: inline-block;
-  width:210px;
-    float: right;
-    margin-bottom: 10px;
+  width: 210px;
+  height: 100px;
+  float: right;
+  margin-bottom: 5px;
 }
+
+
 
 .yesno{
   display:flex;
   margin-top:15px;
-    float: right;
+  float: right;
 }
+
+
 /*4가지 질문중 1개 클릭했을때 yes/no 나타나기 적용..*/
 .yes{
     width: 90px;
     height: 90px;
-    border-radius: 50%; /* 동그라미 */
+    border-radius: 30%; /* 동그라미 */
     border: 2px solid silver;
     display: flex;
     /*display: inline-block;*/
-    margin-right: 20px;
+    margin: auto;
     font-size: 15px;
     justify-content: center; 
     align-items: center;
@@ -68,6 +73,7 @@ body .container {
     border: 2px solid silver;
     font-size: 15px;
     display: flex;
+    margin: auto;
     justify-content: center;
     align-items: center;
 }
@@ -75,8 +81,8 @@ body .container {
 .question {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px; /* 버튼 간격 조절 */
+    grid-template-columns: repeat(auto-fit, min(50, auto));
+    gap: 5px; /* 버튼 간격 조절 */
     text-align: center; /* 버튼 안의 텍스트 중앙 정렬 */
 }
 

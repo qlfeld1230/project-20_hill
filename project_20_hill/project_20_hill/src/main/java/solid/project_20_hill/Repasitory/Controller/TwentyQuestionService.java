@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -19,5 +20,9 @@ public class TwentyQuestionService {
 
     public Optional<TwentyQuestionTable> findById (Long id) {
         return twentyQuestionRepository.findById(id);
+    }
+
+    public List<TwentyQuestionTable> findByQuestion (String question) {
+        return twentyQuestionRepository.findByQuestion(question);
     }
 }

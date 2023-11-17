@@ -20,4 +20,8 @@ public class Gian84Service {
     public Optional<Gian84Table> findById (Long id) {
         return gian84Repository.findById(id);
     }
+
+    public List<Gian84Table> findByAnswer (String answer) {
+        return gian84Repository.findByAnswer(answer);
+    }
 }
