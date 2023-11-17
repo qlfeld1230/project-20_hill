@@ -7,4 +7,5 @@ public interface TwentyQuestionRepository {
     List<TwentyQuestionTable> findAll();
     Optional<TwentyQuestionTable> findById(Long id);
 
+    List<TwentyQuestionTable> findByQuestion(String question);
 }

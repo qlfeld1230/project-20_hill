@@ -26,24 +26,29 @@ public class MainController{
 
     @GetMapping("/gian84")
     @ResponseBody
-    public Optional<Gian84Table> getGian84(){
-        return gian84Service.findById(3L);
+    public List<Gian84Table> getGian84(){
+        return gian84Service.findByAnswer("아니오");
     }
 
 
     @GetMapping("/itsup")
     @ResponseBody
-    public Optional<ItsupTable> getitsup(){
+    public Optional<ItsupTable> getItsup(){
         return itsupService.findById(4L);
     }
 
 
     @GetMapping("/ukman")
     @ResponseBody
-    public Optional<UkmanTable> getukman(){
+    public Optional<UkmanTable> getUkman(){
         return ukmanService.findById(5L);
     }
 
+    @GetMapping("/question")
+    @ResponseBody
+    public List<TwentyQuestionTable> getQuestion(){
+        return twentyQuestionService.findByQuestion("먹방을 주로 합니까?");
+    }
 
     @RequestMapping("/success")
     public String successPage() {

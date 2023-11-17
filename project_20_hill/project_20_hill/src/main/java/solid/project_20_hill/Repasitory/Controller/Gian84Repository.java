@@ -6,4 +6,5 @@ import java.util.Optional;
 public interface Gian84Repository {
     List<Gian84Table> findAll();
     Optional<Gian84Table> findById(Long id);
+    List<Gian84Table> findByAnswer(String answer);
 }
