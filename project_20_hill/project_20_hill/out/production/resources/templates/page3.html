@@ -22,15 +22,9 @@
         <p id="displayArea"></p>
 
         <br>
-        <!-- 서버에 저장된 정답DB 연동 -->
-        정답입니다!
+        <div class="text" th:text="${userName}"></div>님께서 정답을 맞추셨습니다.
         <br>
-        <script>
-            <!-- DB연동 필요, 임시(정준하)-->
-            var name_player = "플레이어 이름";
-            var count = 3;
-            document.write(name_player+"님은 누적 "+count+"번 정답을 맞추셨습니다.")
-        </script>
+
         내일도 다시 도전해 주세요!
         </br>
 

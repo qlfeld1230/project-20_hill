@@ -120,6 +120,7 @@ public class MainController{
         model.addAttribute("questions", questions);
         model.addAttribute("count", dto.count+1);
         model.addAttribute("YorN", YorN);
+        model.addAttribute("userName",dto.userName);
 
         return"/page2";
     }
