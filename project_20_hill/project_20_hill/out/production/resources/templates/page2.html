@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>In Game</title>
 
@@ -20,18 +21,18 @@
     <div class="previous_question">
         이전 질문
         <br>
-        <div class="box" style="display: inline-block">
+        <div class="box">
             <div class="text" th:text="${name}"> </div>
         </div>
     </div>
-
-    <div class="answer">
+    <div class="answer" style="padding-top: 20px;">
         선택한 질문에 대한 답변
         <br>
         <div class="box">
             <div class="text" th:text="${YorN}"> </div>
         </div>
     </div>
+
         <div style="text-align:center;">
             <form id="form" autocomplete="off" method="get" th:action="@{/gameover}">
                 <div id="name-wrapper" style="padding-top: 20px;">

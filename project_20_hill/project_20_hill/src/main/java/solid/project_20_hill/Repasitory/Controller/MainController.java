@@ -86,8 +86,6 @@ public class MainController{
         if(!getQuestion.isEmpty())
             question = getQuestion.get(0).toString();
 
-        System.out.println(dto.getQuestion());
-
         Matcher matcher = pattern.matcher(question);
 
         if (matcher.find()) {

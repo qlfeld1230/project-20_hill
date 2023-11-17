@@ -22,10 +22,12 @@
         <p id="displayArea"></p>
 
         <br>
+        <br>
+        <br>
         <!-- 서버에 저장된 정답DB 연동 -->
         <script>
-            <!-- DB연동 필요, 임시(정준하)-->
-            var name_today = "정준하"
+            // 바꿀 부분
+            var name_today = "기안84"
             document.write("오늘의 정답은 '" + name_today+"'였습니다.")
         </script>
         </br>
@@ -34,12 +36,11 @@
 
         <br>
             <!-- page4 링크 연동 -->
-        <form id="form" autocomplete="off" method="get" th:action="@{/halloffame}">
-            <div id="name-wrapper" style="padding-top: 60px; ">
-                <input type="submit" value="명예의전당" id="name_button" style="cursor: pointer;padding: 17px 40px;font-size: 40px" >
-            </div>
-        </form>
-        </br>
+<!--        <form id="form" autocomplete="off" method="get" th:action="@{/halloffame}">-->
+<!--            <div id="name-wrapper" style="padding-top: 60px; ">-->
+<!--                <input type="submit" value="명예의전당" id="name_button" style="cursor: pointer;padding: 17px 40px;font-size: 40px" >-->
+<!--            </div>-->
+<!--        </form>-->
     </div>
 
 </body>
