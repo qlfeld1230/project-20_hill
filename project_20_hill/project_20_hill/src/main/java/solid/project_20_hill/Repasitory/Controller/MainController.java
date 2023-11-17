@@ -93,6 +93,10 @@ public class MainController{
         List<Gian84Table> getGianTable;
 
         String question = "";
+        Long id = 0L;
+        String extractedString = "";
+        String YorN = "";
+
         // question에서 id추출
         Pattern pattern = Pattern.compile("id=(\\d+)");
 
@@ -100,10 +104,6 @@ public class MainController{
             question = getQuestion.get(0).toString();
 
         Matcher matcher = pattern.matcher(question);
-
-        Long id = 0L;
-        String extractedString = "";
-        String YorN = "";
 
         if (matcher.find()) {
             id = Long.parseLong(matcher.group(1));
