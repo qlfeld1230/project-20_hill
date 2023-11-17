@@ -47,7 +47,9 @@ public class MainController{
 //    }
 
     @RequestMapping("/success")
+//    @PostMapping("/success")
     public String successPage() {
+
         return "/page3";
     }
 
@@ -68,7 +70,7 @@ public class MainController{
 
         List<TwentyQuestionTable> allQuestions = twentyQuestionService.gettwentyQuestionTableList();
         List<TwentyQuestionTable> questions = getRandomQuestions(allQuestions, 4);
-        List<TwentyQuestionTable> getQuestion = twentyQuestionService.findByQuestion(dto.question);
+        List<TwentyQuestionTable> getQuestion = twentyQuestionService.findByQuestion(dto.getQuestion());
 
         // 매일 바꿀 부분
         List<Gian84Table> getGianTable;
@@ -83,6 +85,8 @@ public class MainController{
 
         if(!getQuestion.isEmpty())
             question = getQuestion.get(0).toString();
+
+        System.out.println(dto.getQuestion());
 
         Matcher matcher = pattern.matcher(question);
 
