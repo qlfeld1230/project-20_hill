@@ -3,6 +3,12 @@
 **웹 스무고개 게임**은 사용자가 서버가 설정한 단어를 제한된 질문으로 추측하는 웹 기반 게임입니다.  
 **Web 20 Questions Game** is a web-based game where users try to guess a word set by the server using a limited number of questions.
 
+** 🛠️ 기술 스택 / Tech Stack **
+
+- **백엔드 / Backend**: Spring Boot, Java
+- **프론트엔드 / Frontend**: HTML, CSS, JavaScript
+- **데이터베이스 / Database**: MySQL
+
 ---
 
 ## 🎯 프로젝트 개요 / Project Overview
@@ -64,13 +70,6 @@
 
 ## 🖼️ 스크린샷 / ScreenShot
 
-
----
-
-## 🛠️ 기술 스택 / Tech Stack
-
-- **백엔드 / Backend**: Spring Boot, Java.
-- **프론트엔드 / Frontend**: HTML, CSS, JavaScript.
-- **데이터베이스 / Database**: MySQL or H2 (for local testing).
+![index](ScreenShot/index.png)
 
 ---
