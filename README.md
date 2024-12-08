@@ -21,7 +21,7 @@
   The server sets a **Korean celebrity** as the word daily
 - 질문 목록은 80가지의 질문 중 매번 섞여서 표시되어 반복적인 패턴을 방지  
   The question list is shuffled each time from a pool of 80 questions to prevent repetitive patterns
-- 질문에 대한 서버 응답을 실시간으로 화면에 표시.  
+- 질문에 대한 서버 응답을 실시간으로 화면에 표시  
   The server's responses to the questions are displayed in real-time on the screen as "Yes" or "No"
 
 ---
